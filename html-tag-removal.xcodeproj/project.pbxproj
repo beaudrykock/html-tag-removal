@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F133F4114E59512002BF11F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F133F4014E59512002BF11F /* UIKit.framework */; };
+		9F133F4314E59512002BF11F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F133F4214E59512002BF11F /* Foundation.framework */; };
+		9F133F4514E59512002BF11F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F133F4414E59512002BF11F /* CoreGraphics.framework */; };
+		9F133F4B14E59512002BF11F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F133F4914E59512002BF11F /* InfoPlist.strings */; };
+		9F133F4D14E59512002BF11F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F133F4C14E59512002BF11F /* main.m */; };
+		9F133F5114E59512002BF11F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F133F5014E59512002BF11F /* AppDelegate.m */; };
+		9F133F5414E59512002BF11F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F133F5214E59512002BF11F /* MainStoryboard.storyboard */; };
+		9F133F5714E59512002BF11F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F133F5614E59512002BF11F /* ViewController.m */; };
+		9F133F5F14E59512002BF11F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F133F5E14E59512002BF11F /* SenTestingKit.framework */; };
+		9F133F6014E59512002BF11F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F133F4014E59512002BF11F /* UIKit.framework */; };
+		9F133F6114E59512002BF11F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F133F4214E59512002BF11F /* Foundation.framework */; };
+		9F133F6914E59512002BF11F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F133F6714E59512002BF11F /* InfoPlist.strings */; };
+		9F133F6C14E59512002BF11F /* html_tag_removalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F133F6B14E59512002BF11F /* html_tag_removalTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F133F6214E59512002BF11F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F133F3314E59511002BF11F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F133F3B14E59512002BF11F;
+			remoteInfo = "html-tag-removal";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F133F3C14E59512002BF11F /* html-tag-removal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "html-tag-removal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F133F4014E59512002BF11F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9F133F4214E59512002BF11F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9F133F4414E59512002BF11F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9F133F4814E59512002BF11F /* html-tag-removal-Info.plist */ = {isa = PBXFileReference; path = "html-tag-removal-Info.plist"; sourceTree = "<group>"; };
+		9F133F4A14E59512002BF11F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9F133F4C14E59512002BF11F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9F133F4E14E59512002BF11F /* html-tag-removal-Prefix.pch */ = {isa = PBXFileReference; path = "html-tag-removal-Prefix.pch"; sourceTree = "<group>"; };
+		9F133F4F14E59512002BF11F /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		9F133F5014E59512002BF11F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9F133F5314E59512002BF11F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9F133F5514E59512002BF11F /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		9F133F5614E59512002BF11F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9F133F5D14E59512002BF11F /* html-tag-removalTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "html-tag-removalTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F133F5E14E59512002BF11F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9F133F6614E59512002BF11F /* html-tag-removalTests-Info.plist */ = {isa = PBXFileReference; path = "html-tag-removalTests-Info.plist"; sourceTree = "<group>"; };
+		9F133F6814E59512002BF11F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9F133F6A14E59512002BF11F /* html_tag_removalTests.h */ = {isa = PBXFileReference; path = html_tag_removalTests.h; sourceTree = "<group>"; };
+		9F133F6B14E59512002BF11F /* html_tag_removalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = html_tag_removalTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F133F3914E59512002BF11F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F133F4114E59512002BF11F /* UIKit.framework in Frameworks */,
+				9F133F4314E59512002BF11F /* Foundation.framework in Frameworks */,
+				9F133F4514E59512002BF11F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F133F5914E59512002BF11F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F133F5F14E59512002BF11F /* SenTestingKit.framework in Frameworks */,
+				9F133F6014E59512002BF11F /* UIKit.framework in Frameworks */,
+				9F133F6114E59512002BF11F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F133F3114E59511002BF11F = {
+			isa = PBXGroup;
+			children = (
+				9F133F4614E59512002BF11F /* html-tag-removal */,
+				9F133F6414E59512002BF11F /* html-tag-removalTests */,
+				9F133F3F14E59512002BF11F /* Frameworks */,
+				9F133F3D14E59512002BF11F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F133F3D14E59512002BF11F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F133F3C14E59512002BF11F /* html-tag-removal.app */,
+				9F133F5D14E59512002BF11F /* html-tag-removalTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F133F3F14E59512002BF11F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F133F4014E59512002BF11F /* UIKit.framework */,
+				9F133F4214E59512002BF11F /* Foundation.framework */,
+				9F133F4414E59512002BF11F /* CoreGraphics.framework */,
+				9F133F5E14E59512002BF11F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F133F4614E59512002BF11F /* html-tag-removal */ = {
+			isa = PBXGroup;
+			children = (
+				9F133F4F14E59512002BF11F /* AppDelegate.h */,
+				9F133F5014E59512002BF11F /* AppDelegate.m */,
+				9F133F5214E59512002BF11F /* MainStoryboard.storyboard */,
+				9F133F5514E59512002BF11F /* ViewController.h */,
+				9F133F5614E59512002BF11F /* ViewController.m */,
+				9F133F4714E59512002BF11F /* Supporting Files */,
+			);
+			path = "html-tag-removal";
+			sourceTree = "<group>";
+		};
+		9F133F4714E59512002BF11F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F133F4814E59512002BF11F /* html-tag-removal-Info.plist */,
+				9F133F4914E59512002BF11F /* InfoPlist.strings */,
+				9F133F4C14E59512002BF11F /* main.m */,
+				9F133F4E14E59512002BF11F /* html-tag-removal-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F133F6414E59512002BF11F /* html-tag-removalTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F133F6A14E59512002BF11F /* html_tag_removalTests.h */,
+				9F133F6B14E59512002BF11F /* html_tag_removalTests.m */,
+				9F133F6514E59512002BF11F /* Supporting Files */,
+			);
+			path = "html-tag-removalTests";
+			sourceTree = "<group>";
+		};
+		9F133F6514E59512002BF11F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F133F6614E59512002BF11F /* html-tag-removalTests-Info.plist */,
+				9F133F6714E59512002BF11F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F133F3B14E59512002BF11F /* html-tag-removal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F133F6F14E59512002BF11F /* Build configuration list for PBXNativeTarget "html-tag-removal" */;
+			buildPhases = (
+				9F133F3814E59512002BF11F /* Sources */,
+				9F133F3914E59512002BF11F /* Frameworks */,
+				9F133F3A14E59512002BF11F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "html-tag-removal";
+			productName = "html-tag-removal";
+			productReference = 9F133F3C14E59512002BF11F /* html-tag-removal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F133F5C14E59512002BF11F /* html-tag-removalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F133F7214E59512002BF11F /* Build configuration list for PBXNativeTarget "html-tag-removalTests" */;
+			buildPhases = (
+				9F133F5814E59512002BF11F /* Sources */,
+				9F133F5914E59512002BF11F /* Frameworks */,
+				9F133F5A14E59512002BF11F /* Resources */,
+				9F133F5B14E59512002BF11F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F133F6314E59512002BF11F /* PBXTargetDependency */,
+			);
+			name = "html-tag-removalTests";
+			productName = "html-tag-removalTests";
+			productReference = 9F133F5D14E59512002BF11F /* html-tag-removalTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F133F3314E59511002BF11F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "University of Oxford";
+			};
+			buildConfigurationList = 9F133F3614E59511002BF11F /* Build configuration list for PBXProject "html-tag-removal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9F133F3114E59511002BF11F;
+			productRefGroup = 9F133F3D14E59512002BF11F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F133F3B14E59512002BF11F /* html-tag-removal */,
+				9F133F5C14E59512002BF11F /* html-tag-removalTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F133F3A14E59512002BF11F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F133F4B14E59512002BF11F /* InfoPlist.strings in Resources */,
+				9F133F5414E59512002BF11F /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F133F5A14E59512002BF11F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F133F6914E59512002BF11F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9F133F5B14E59512002BF11F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F133F3814E59512002BF11F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F133F4D14E59512002BF11F /* main.m in Sources */,
+				9F133F5114E59512002BF11F /* AppDelegate.m in Sources */,
+				9F133F5714E59512002BF11F /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F133F5814E59512002BF11F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F133F6C14E59512002BF11F /* html_tag_removalTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F133F6314E59512002BF11F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F133F3B14E59512002BF11F /* html-tag-removal */;
+			targetProxy = 9F133F6214E59512002BF11F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F133F4914E59512002BF11F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F133F4A14E59512002BF11F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9F133F5214E59512002BF11F /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F133F5314E59512002BF11F /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		9F133F6714E59512002BF11F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F133F6814E59512002BF11F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F133F6D14E59512002BF11F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9F133F6E14E59512002BF11F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F133F7014E59512002BF11F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "html-tag-removal/html-tag-removal-Prefix.pch";
+				INFOPLIST_FILE = "html-tag-removal/html-tag-removal-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9F133F7114E59512002BF11F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "html-tag-removal/html-tag-removal-Prefix.pch";
+				INFOPLIST_FILE = "html-tag-removal/html-tag-removal-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9F133F7314E59512002BF11F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/html-tag-removal.app/html-tag-removal";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "html-tag-removal/html-tag-removal-Prefix.pch";
+				INFOPLIST_FILE = "html-tag-removalTests/html-tag-removalTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9F133F7414E59512002BF11F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/html-tag-removal.app/html-tag-removal";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "html-tag-removal/html-tag-removal-Prefix.pch";
+				INFOPLIST_FILE = "html-tag-removalTests/html-tag-removalTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F133F3614E59511002BF11F /* Build configuration list for PBXProject "html-tag-removal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F133F6D14E59512002BF11F /* Debug */,
+				9F133F6E14E59512002BF11F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F133F6F14E59512002BF11F /* Build configuration list for PBXNativeTarget "html-tag-removal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F133F7014E59512002BF11F /* Debug */,
+				9F133F7114E59512002BF11F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9F133F7214E59512002BF11F /* Build configuration list for PBXNativeTarget "html-tag-removalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F133F7314E59512002BF11F /* Debug */,
+				9F133F7414E59512002BF11F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F133F3314E59511002BF11F /* Project object */;
+}
