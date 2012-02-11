@@ -11,6 +11,13 @@
 
 @implementation SmartParse
 
+@synthesize boldRanges;
+@synthesize italicRanges;
+@synthesize fulltext;
+@synthesize tagStringsAndTypes;
+@synthesize snippets;
+@synthesize tags;
+
 /*
  * 1. Extracts converted HTML paragraph tags and replaces them with NSParagraphSeparatorCharacter
  * 2. Removes converted HTML tags for <strong>, <em>, <i> and <div> and creates NSRange objects for formatting
@@ -19,9 +26,9 @@
  * 
  */
 
--(void)parseText
+-(void)parse
 {
-	i
+	
 #ifdef DEBUG_SP
 		NSLog(@"contents before parsing = %@",fulltext);
 #endif
@@ -82,9 +89,8 @@
                                                    @"", paragraphSeparatorCharAsStr,nil];
         
         // initialize ranges
-        // TODO: release these
-        boldRanges = [[NSMutableArray alloc] init];
-        italicRanges = [[NSMutableArray alloc] init];
+        boldRanges = [NSMutableArray arrayWithCapacity:10];
+        italicRanges = [NSMutableArray arrayWithCapacity:10];
         
         snippets = [NSMutableArray arrayWithCapacity:100];
         tags = [NSMutableArray arrayWithCapacity:100];
@@ -125,8 +131,6 @@
             }
         }
         
-        // TEST
-        
         NSEnumerator *controlAndFormattingMarksEnumerator = [controlAndFormattingMarks keyEnumerator];
         mainScanner = [NSScanner scannerWithString:stringToParse];
         
@@ -147,8 +151,6 @@
                 }
             }
         }
-        
-        // END TEST
         
         // now sweep for bracketed singletons that can be easily replaced or removed
         NSEnumerator *singletonTagsEnumerator = [singletonTags keyEnumerator];
@@ -221,11 +223,6 @@
                 }
 #ifdef DEBUG_SP 
                 NSLog(@"\n\nDEBUG: creating snippet with full text: %@", [newSnippet text]);
-                
-                if ([[newSnippet text] rangeOfString: @"Judith"].location != NSNotFound)
-                {
-                    NSLog(@"Breaking...");
-                }
 #endif
                 // store newSnippet
                 [snippets addObject: newSnippet];
@@ -259,9 +256,8 @@
                     [mainScanner setScanLocation:[mainScanner scanLocation]+[greaterThanBracket length]];
                     int originalScanLocation = [mainScanner scanLocation];
                     [mainScanner scanUpToString:tagToMatch intoString:&temp];
-                    // NSLog(@"temp1 = %@", temp);
                     [mainScanner scanUpToString:greaterThanBracket intoString:&temp];
-                    // NSLog(@"temp2 = %@", temp);
+                    
                     if (([mainScanner scanLocation]+[greaterThanBracket length]) < [stringToParse length]-1)
                     {
                         [mainScanner setScanLocation:[mainScanner scanLocation]+[greaterThanBracket length]];
@@ -277,15 +273,6 @@
 #ifdef DEBUG_SP 
                 NSLog(@"\n\nDEBUG: skipping content removal tag");
 #endif
-                // create deletion range
-                //NSRange rangeToRemove = NSMakeRange(startLocation, [mainScanner scanLocation]-startLocation);
-                
-                // delete characters
-                //[stringToParse replaceCharactersInRange: rangeToRemove withString: @""];
-                
-                // regenerate scanner
-                //mainScanner = [NSScanner scannerWithString:stringToParse];
-                //[mainScanner setScanLocation:startLocation];
             }
             else {
                 subFound = NO;
@@ -326,7 +313,7 @@
                     // create new tag
                     Tag *newTag = [[Tag alloc] init];
                     
-                    [newTag setType: [self getTagTypeFromString:scanContents]];
+                    [newTag setTagType: [self getTagTypeFromString:scanContents]];
                     
                     [newTag setID: tagCounter];
                     
@@ -394,22 +381,82 @@
         
         
         // set text to be contents of combined
-        fulltext = [combinedSnippets retain];
-        
-        // set flag
-        isParsed = YES;
-        
-        // check that associated article type has been set in each of the ArticleImage objects
-        for (ArticleImage *articleImage in articleImages)
-        {
-            [articleImage setAssociatedArticleType:[self department]];
-        }
+        fulltext = combinedSnippets;
         
 #ifdef DEBUG_SP 
         NSLog(@"Combined text = %@", combinedSnippets);
 #endif
         
-    }
-
 }
+
+-(void)cleanSnippets
+{
+    NSMutableArray *snippetsToKeep = [NSMutableArray arrayWithCapacity:[snippets count]];
+    
+    int newCount = 0;
+    for (Snippet *snippet in snippets)
+    {
+        [snippet cleanThyself];
+        if (![snippet isDud]) [snippetsToKeep addObject: snippet];
+    }
+    
+    newCount = [snippetsToKeep count];
+    
+    // clear old snippets
+    [snippets removeAllObjects];
+    
+    // re-add snippets to keep to snippets array
+    for (Snippet *snippet in snippetsToKeep)
+    {
+        [snippets addObject: snippet];
+    }
+    
+}
+
+-(int)generateNewTagID
+{
+    return tagCounter;
+    tagCounter++;
+}
+
+-(int)getTagTypeFromString:(NSString *)verboseTagType
+{
+	NSEnumerator *tagStringsAndTypesEnumerator = [tagStringsAndTypes keyEnumerator];
+	int tag = -1;
+	NSString *key = @"";
+	BOOL found = NO;
+	while ((key = (NSString*)[tagStringsAndTypesEnumerator nextObject]) && !found)
+	{
+		if ([verboseTagType rangeOfString: key].location != NSNotFound)
+		{
+			NSNumber *tagNbr = (NSNumber*)[tagStringsAndTypes objectForKey:key];
+			tag = [tagNbr intValue];
+            found = YES;
+		}
+	}
+	return tag;
+}
+
+
+-(BOOL)openTagsExist
+{
+	BOOL found = NO;
+	int index = 0;
+	while (!found && index < [tags count])
+	{
+		Tag *tempTag = [tags objectAtIndex:index];
+		
+		if ([tempTag isOpen]) {
+			found = YES;
+		}
+		else {
+			index++;
+		}
+        
+	}
+	
+	return found;
+}
+
+
 @end

@@ -12,21 +12,21 @@
 
 @implementation Tag
 
--(BOOL)isOfSameTagType:(int)tagType
+-(BOOL)isOfSameTagType:(int)type
 {
-	if (type == tagType) return YES;
+	if (tagType == type) return YES;
 		
 	return NO;
 }
 
--(int)type
+-(int)tagType
 {
-	return type;
+	return tagType;
 }
 
--(void)setType: (int)typeToSet
+-(void)setTagType: (int)typeToSet
 {
-	type = typeToSet;
+	tagType = typeToSet;
 	isOpen = YES;
 }
 
@@ -47,14 +47,14 @@
 
 -(BOOL)isParagraph
 {
-    if (type == kParagraphType)
+    if (tagType == kParagraphType)
         return YES;
     return NO;
 }
 
 -(void)print
 {
-    NSLog(@"Tag type = %@", [self typeToString: type]);
+    NSLog(@"Tag type = %@", [self tagTypeToString: tagType]);
     NSLog(@"Tag ID = %i", ID);
 }
 

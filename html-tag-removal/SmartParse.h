@@ -42,10 +42,9 @@ enum {
 @property (nonatomic, retain) NSMutableArray *tags;
 @property (nonatomic, retain) NSDictionary *tagStringsAndTypes;
 
--(NSString*)smartParse;
+-(void)parse;
 -(void)cleanSnippets;
 -(BOOL)openTagsExist;
--(NSString*)getTagTypeAsString: (NSString *)verboseTagType;
 -(int)generateNewTagID;
 -(int)getTagTypeFromString:(NSString *)verboseTagType;
 

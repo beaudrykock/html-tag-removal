@@ -31,7 +31,7 @@
     int counter = 0;
     while (!found && counter < [tags count])
     {
-        if ([[tags objectAtIndex:counter] type] == kBoldType) found = YES;
+        if ([[tags objectAtIndex:counter] tagType] == kBoldType) found = YES;
             counter++;
     }
     
@@ -44,7 +44,7 @@
     int counter = 0;
     while (!found && counter < [tags count])
     {
-        if ([[tags objectAtIndex:counter] type] == kItalicType) found = YES;
+        if ([[tags objectAtIndex:counter] tagType] == kItalicType) found = YES;
             counter++;
     }
     
@@ -104,13 +104,6 @@
     {
         [tag print];
     }
-}
-
--(void)dealloc
-{
-	[super dealloc];
-	[text release];
-	[tags release];
 }
 
 @end

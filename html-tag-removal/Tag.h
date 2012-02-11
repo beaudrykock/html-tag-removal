@@ -26,21 +26,21 @@
 
 @interface Tag : NSObject {
 	
-	int type;
+	int tagType;
 	BOOL isOpen;
     int ID;
 	
 }
 
 -(void)setIsOpen:(BOOL)openState;
--(BOOL)isOfSameTagType:(int)tagType;
+-(BOOL)isOfSameTagType:(int)type;
 -(void)setID:(int)idToSet;
 -(BOOL)isParagraph;
--(int)type;
--(void)setType:(int)typeToSet;
+-(int)tagType;
+-(void)setTagType:(int)typeToSet;
 -(BOOL)isOpen;
 -(void)setIsOpen:(BOOL)openState;
 -(void)print;
--(NSString*)typeToString:(int)typeAsInt;
+-(NSString*)tagTypeToString:(int)typeAsInt;
 
 @end
